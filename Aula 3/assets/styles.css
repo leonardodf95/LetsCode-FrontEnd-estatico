@@ -1,0 +1,98 @@
+/* Seletor universal */
+* {
+    margin: 0;
+}
+
+/* Seletor por tag */
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+h2 {
+    color: green;
+    margin: 10px;
+}
+
+/* Seletor por classe */
+.titulo, 
+.subtitulo {
+    color: red;            
+}
+
+h2.subtitulo {
+    background-color: yellow;
+    width: 50vw;
+    height: 10vh;
+}
+
+/* Seletor por ID */
+#negrito {
+    font-weight: bold;
+}
+
+/* Seletor por atributo */
+/* Seleciona todos os elementos <a> que possuem o atributo title */
+a[title] {
+    color: red;
+}
+
+/* Seleciona todos os elementos <a> que possuem o atributo title = "titulo-1" */
+a[title="titulo-1"] {
+    color: black;
+}
+
+/* Seleciona todos os elementos <p> que possuem o atributo class = "texto"
+    ou que possuam na sua lista de classes, a classe "texto" */
+p[class~="texto"] {
+    font-size: 32px;
+}
+
+/* Seleciona todos os elementos <p> que possuem o atributo class = "texto-qualquer"
+    ou inicie por texto-qualquer, seguido de hífen */
+p[class|="texto-qualquer"] {
+    margin-top: 24px;
+}
+
+/* Seleciona todos os elementos <p> que possuem o atributo class = "texto"
+    ou inicie por texto, seguido de hífen */
+p[class|="texto"] {
+    margin-top: 24px;
+}
+
+/* Seleciona todos os elementos <p> cujo atributo class inicia com "texto" */
+p[class^="texto"] {
+    border: 1px solid black;
+}
+
+/* Seleciona todos os elementos <p> cujo atributo class termina com "texto" */
+p[class$="verde"] {
+    color: green;
+}
+
+a[title*="titu"] {
+    color: blue;
+}
+
+p + br + span {
+    color: red;
+}
+
+/* Seletor gerais de irmãos */
+p ~ span {
+    color: red;
+}
+
+/* Seletor de filhos */
+ul > li {
+    border-bottom: 1px solid black;
+    color: green;
+}
+
+div > .classe-qualquer {
+    border: 1px solid blue;
+}
+
+div .texto-negrito {
+    font-weight: bolder;
+}
